@@ -1,3 +1,4 @@
+//排序和搜索
 function ArrayList(list) {
     var array = list || []
 

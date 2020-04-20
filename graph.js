@@ -42,15 +42,19 @@ function Dictionary() {
 
 
 
-function Graph() {
-    var vertices = []
-    var adjList = new Dictionary()
 
+//图
+function Graph() {
+    var vertices = [] //存储顶点
+    var adjList = new Dictionary() //存储邻接表
+
+    //向图中添加新的顶点
     this.addVertex = function(v) {
         vertices.push(v)
         adjList.set(v, [])
     }
 
+    //添加顶点之间的边
     this.addEdge = function(v, w) {
         adjList.get(v).push(w)
         adjList.get(w).push(v)

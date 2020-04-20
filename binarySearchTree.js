@@ -1,3 +1,4 @@
+//二叉搜索树
 function BinarySearchTree() {
     var root = null
 
