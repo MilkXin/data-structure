@@ -22,7 +22,7 @@ function ArrayList(list) {
     }
 
     var merge = function(left, right) {
-        var result = []
+        /* var result = []
         var il = 0
         var ir = 0
 
@@ -42,6 +42,24 @@ function ArrayList(list) {
             result.push(right[ir++])
         }
 
+        return result */
+
+        const result = []
+        while (left.length > 0 && right.length > 0) {
+            if (left[0] <= right[0]) {
+                result.push(left.shift())
+            } else {
+                result.push(right.shift())
+            }
+        }
+
+        while (left.length > 0) {
+            result.push(left.shift())
+        }
+
+        while (right.length > 0) {
+            result.push(right.shift())
+        }
         return result
     }
 
@@ -104,7 +122,7 @@ function ArrayList(list) {
     //冒泡排序
     this.bubbleSort = function() {
         var length = array.length
-        for (var i = 0; i < length; i++) {
+        for (var i = 0; i < length-1; i++) {
             for (var j = 0; j < length-1-i; j++) {
                 if (array[j] > array[j + 1]) {
                     swap(j, j + 1)
