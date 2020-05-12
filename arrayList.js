@@ -22,7 +22,7 @@ function ArrayList(list) {
     }
 
     var merge = function(left, right) {
-        /* var result = []
+        var result = []
         var il = 0
         var ir = 0
 
@@ -42,8 +42,9 @@ function ArrayList(list) {
             result.push(right[ir++])
         }
 
-        return result */
+        return result
 
+        /* 数据量过大时（千万级）有严重的性能问题
         const result = []
         while (left.length > 0 && right.length > 0) {
             if (left[0] <= right[0]) {
@@ -60,7 +61,7 @@ function ArrayList(list) {
         while (right.length > 0) {
             result.push(right.shift())
         }
-        return result
+        return result */
     }
 
     var quick = function(array, left, right) {
