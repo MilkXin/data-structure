@@ -136,7 +136,7 @@ function ArrayList(list) {
     this.selectSort = function() {
         var length = array.length
         var indexMin
-        for (var i=0; i<length; i++) {
+        for (var i=0; i<length-1; i++) {
             indexMin = i
             for (var j=i; j<length; j++) {
                 if (array[indexMin] > array[j]) {
